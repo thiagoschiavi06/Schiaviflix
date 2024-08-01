@@ -1,61 +1,23 @@
 body {
     color:white;
-    background:black;
+    background:#212121;
     margin:0px;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
+    display: fixed;
 }
 
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-#mode-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background-color: transparent;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-#mode-toggle span {
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-}
-
-#mode-toggle span:first-child {
-  transform: translateX(0);
-}
-
-#mode-toggle span:last-child {
-  transform: translateX(100%);
-}
-
-#mode-toggle:hover span:first-child {
-  transform: translateX(-100%);
-}
-
-#mode-toggle:hover span:last-child {
-  transform: translateX(0);
-}
-
-body.dark-mode #mode-toggle span:first-child {
-  transform: translateX(-100%);
-}
-
-body.dark-mode #mode-toggle span:last-child {
-  transform: translateX(0);
-}
 
 header {
     border-bottom: solid 2px rgb(138, 175, 222);
     padding: 20px;
     font-size: 32px;
     color: rgb(138, 175, 222);
+ /* um preto menos preto pra não arder os olhinhos */
+  background-color: #212121; 
+  display: fex; 
+  justify-content: space-between; 
+  align-items: center;
 }
 
 .titulo:hover {
@@ -68,7 +30,7 @@ header {
 
 
 .chamada {
-    background: rgb(184, 156, 213);
+    background: #d46023;
     padding-bottom: 80px;
     padding-top: 80px;
     display: flex;
@@ -96,7 +58,7 @@ p {
     padding-left: 20px;
     padding-right: 20px
     margin-top: 70px;
-    color: rgb(138, 175, 222);
+    background-color: #212121;
 }
 
 .categoria-videos img {
@@ -121,13 +83,14 @@ p {
     display: flex;
     overflow-x: auto;
     gap: 10px;
+    background-color: #212121;
 }
 
 .subcategoria {
     padding-left: 20px;
     padding-right: 20px
     margin-top: 50px;
-    color: rgb(138, 175, 222);
+   background-color: #212121;
 }
 
 .subcategoria-videos img {
@@ -146,4 +109,28 @@ p {
 
 .subcategoria h2 {
    color: rgb(138, 175, 222) 
+}
+
+.trilho {
+    width: 60px;
+    height: 30px;
+    background-color: #4d4d4d;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark .indicador{
+    left: 50px;
 }
